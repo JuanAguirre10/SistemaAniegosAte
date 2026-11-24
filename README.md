@@ -28,7 +28,7 @@ Desde 55 la prioridad es **alta**, de 45 a 54 es **media** y por debajo de 45 es
 ## Tecnologías
 
 - Next.js (App Router) con TypeScript y Tailwind CSS
-- Leaflet y React Leaflet, con mapas de OpenStreetMap y CARTO
+- Leaflet y React Leaflet, con mapas de OpenStreetMap
 - Base de datos PostgreSQL en Neon, a la que se accede con `@neondatabase/serverless`
 - Despliegue en Vercel
 

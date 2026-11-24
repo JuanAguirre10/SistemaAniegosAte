@@ -23,16 +23,21 @@ function Clic({ onElegir }: { onElegir: (lat: number, lon: number) => void }) {
 }
 
 export default function MapaBase({ puntos = [], reportes = [], alto = "520px", marcador, onElegir }: MapaBaseProps) {
+  const vista =
+    puntos.length > 1
+      ? { bounds: puntos.map((p) => [p.lat, p.lon] as [number, number]), boundsOptions: { padding: [30, 30] as [number, number] } }
+      : { center: [-12.035, -76.89] as [number, number], zoom: 12 };
+
   return (
     <MapContainer
-      center={[-12.035, -76.92]}
-      zoom={13}
+      {...vista}
       scrollWheelZoom
       style={{ height: alto, width: "100%", borderRadius: 12 }}
     >
       <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
-        url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+        className="capa-clara"
       />
 
       {onElegir && <Clic onElegir={onElegir} />}

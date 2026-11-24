@@ -21,6 +21,10 @@ body {
   font-family: inherit;
 }
 
+.capa-clara {
+  filter: saturate(0.55) brightness(1.04);
+}
+
 .leaflet-popup-content {
   margin: 12px 14px;
   font-size: 13px;
