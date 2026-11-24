@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-marca: #2b7bb9;
+  --color-marca-suave: #e8f2fa;
+  --color-agua: #3aa7a0;
+  --color-fondo: #f6f9fb;
+  --color-borde: #dde6ee;
+  --color-texto: #1f2d3a;
+  --color-gris: #5d6b78;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+.leaflet-container {
+  font-family: inherit;
+}
+
+.leaflet-popup-content {
+  margin: 12px 14px;
+  font-size: 13px;
+  line-height: 1.45;
+}
