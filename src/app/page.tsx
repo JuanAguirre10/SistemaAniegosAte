@@ -3,8 +3,6 @@ import { obtenerEventos, obtenerPuntos, obtenerReportes } from "@/lib/datos";
 import { colorNivel, evaluar } from "@/lib/prioridad";
 import { nombreTipo, tipos } from "@/lib/tipos";
 
-export const dynamic = "force-dynamic";
-
 function Barras({ datos }: { datos: { etiqueta: string; valor: number }[] }) {
   const max = Math.max(1, ...datos.map((d) => d.valor));
   return (

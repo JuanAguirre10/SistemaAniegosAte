@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import TablaPrioridad from "@/components/TablaPrioridad";
 import { obtenerEventos, obtenerPuntos } from "@/lib/datos";
 
-export const dynamic = "force-dynamic";
-
 export const metadata: Metadata = { title: "Priorización · Puntos Críticos Ate" };
 
 const reglas = [
@@ -38,7 +36,7 @@ export default async function PaginaPriorizacion() {
         <h1 className="text-2xl font-semibold">Priorización de puntos críticos</h1>
         <p className="text-gris mt-1 max-w-3xl">
           Cada punto recibe una nota del 1 al 5 en cuatro criterios. Con los pesos se calcula un puntaje de 0 a 100:
-          desde 70 la prioridad es alta, entre 45 y 69 es media y por debajo de 45 es baja. Puedes mover los pesos para
+          desde 55 la prioridad es alta, entre 45 y 54 es media y por debajo de 45 es baja. Puedes mover los pesos para
           ver cómo cambia el orden.
         </p>
       </div>

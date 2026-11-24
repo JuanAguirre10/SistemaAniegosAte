@@ -5,8 +5,6 @@ import { haySesion } from "@/lib/sesion";
 import { nombreEstado, nombreTipo, type EstadoReporte } from "@/lib/tipos";
 import { cambiarEstado, salir } from "./acciones";
 
-export const dynamic = "force-dynamic";
-
 export const metadata: Metadata = { title: "Panel · Puntos Críticos Ate", robots: { index: false } };
 
 const colorEstado: Record<EstadoReporte, string> = {

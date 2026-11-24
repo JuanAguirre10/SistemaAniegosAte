@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import VistaMapa from "@/components/VistaMapa";
 import { obtenerEventos, obtenerPuntos, obtenerReportes } from "@/lib/datos";
 
-export const dynamic = "force-dynamic";
-
 export const metadata: Metadata = { title: "Mapa · Puntos Críticos Ate" };
 
 export default async function PaginaMapa() {

@@ -40,7 +40,7 @@ export function notaRecencia(fecha: string) {
 }
 
 export function nivelDe(puntaje: number): Nivel {
-  if (puntaje >= 70) return "Alta";
+  if (puntaje >= 55) return "Alta";
   if (puntaje >= 45) return "Media";
   return "Baja";
 }

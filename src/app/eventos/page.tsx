@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import ListaEventos from "@/components/ListaEventos";
 import { obtenerEventos, obtenerPuntos } from "@/lib/datos";
 
-export const dynamic = "force-dynamic";
-
 export const metadata: Metadata = { title: "Eventos · Puntos Críticos Ate" };
 
 export default async function PaginaEventos() {

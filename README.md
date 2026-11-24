@@ -23,7 +23,7 @@ Cada punto recibe una nota del 1 al 5 en:
 
 `puntaje = Σ(nota × peso) / (5 × Σ pesos) × 100`
 
-Desde 70 la prioridad es **alta**, de 45 a 69 es **media** y por debajo de 45 es **baja**.
+Desde 55 la prioridad es **alta**, de 45 a 54 es **media** y por debajo de 45 es **baja**.
 
 ## Tecnologías
 

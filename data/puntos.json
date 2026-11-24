@@ -1,1 +1,145 @@
-[]
+[
+  {
+    "id": "huaycan-zona-z",
+    "nombre": "Quebrada de la Zona Z de Huaycán",
+    "zona": "Huaycán",
+    "referencia": "Partes altas de la Zona Z, el flujo baja por la Av. Andrés Avelino Cáceres (ubicación aproximada)",
+    "lat": -12.0168395,
+    "lon": -76.8157024,
+    "tipo": "quebrada",
+    "exposicion": 4,
+    "detalle_exposicion": "Cerca de 100 viviendas dentro o al borde del cauce, según el INGEMMET."
+  },
+  {
+    "id": "huaycan-zona-x",
+    "nombre": "Zona X de Huaycán y Av. 15 de Julio",
+    "zona": "Huaycán",
+    "referencia": "Av. UCV y Av. 15 de Julio, por donde baja el flujo de la Zona X (ubicación aproximada)",
+    "lat": -12.0245019,
+    "lon": -76.8218977,
+    "tipo": "quebrada",
+    "exposicion": 5,
+    "detalle_exposicion": "Zona de viviendas con un colegio y una avenida de tránsito."
+  },
+  {
+    "id": "huaycan-vias",
+    "nombre": "Vías principales de Huaycán (zona de la comisaría)",
+    "zona": "Huaycán",
+    "referencia": "Pistas cercanas a la Comisaría PNP Huaycán",
+    "lat": -12.0123028,
+    "lon": -76.8274651,
+    "tipo": "lluvia",
+    "exposicion": 4,
+    "detalle_exposicion": "Vías de acceso de Huaycán con paso de mototaxis, autos y peatones."
+  },
+  {
+    "id": "huaycan-zona-j",
+    "nombre": "Zona J de Huaycán",
+    "zona": "Huaycán",
+    "referencia": "Zona J de la Comunidad Urbana Autogestionaria de Huaycán",
+    "lat": -12.0252509,
+    "lon": -76.8364792,
+    "tipo": "quebrada",
+    "exposicion": 3,
+    "detalle_exposicion": "Zona residencial en ladera."
+  },
+  {
+    "id": "carretera-central-km12",
+    "nombre": "Carretera Central, entrada a Santa Clara (km 12)",
+    "zona": "Santa Clara",
+    "referencia": "Carretera Central a la altura de la entrada a Santa Clara",
+    "lat": -12.018374,
+    "lon": -76.896687,
+    "tipo": "lluvia",
+    "exposicion": 5,
+    "detalle_exposicion": "Vía nacional con alto tránsito de carga y transporte público."
+  },
+  {
+    "id": "bypass-huachipa",
+    "nombre": "ByPass de Huachipa (km 9.8 de la Carretera Central)",
+    "zona": "Santa Clara",
+    "referencia": "Paso a desnivel de la Carretera Central con la Av. Las Torres",
+    "lat": -12.0167117,
+    "lon": -76.8981733,
+    "tipo": "lluvia",
+    "exposicion": 5,
+    "detalle_exposicion": "Paso a desnivel de una vía nacional, sin drenaje según la municipalidad."
+  },
+  {
+    "id": "alameda-ate",
+    "nombre": "Urbanización Alameda de Ate",
+    "zona": "Vitarte",
+    "referencia": "Calles de la urbanización, cerca del Parque N.° 3",
+    "lat": -12.0270122,
+    "lon": -76.9362527,
+    "tipo": "quebrada",
+    "exposicion": 3,
+    "detalle_exposicion": "Urbanización residencial consolidada."
+  },
+  {
+    "id": "horacio-zeballos",
+    "nombre": "Partes altas de Horacio Zeballos",
+    "zona": "Pariachi",
+    "referencia": "Laderas altas del AA.HH. Horacio Zeballos",
+    "lat": -12.016495,
+    "lon": -76.8409699,
+    "tipo": "quebrada",
+    "exposicion": 3,
+    "detalle_exposicion": "Asentamiento humano en ladera."
+  },
+  {
+    "id": "villa-hermosa-roncadora",
+    "nombre": "Villa Hermosa La Roncadora",
+    "zona": "Santa Clara",
+    "referencia": "Viviendas en las laderas, cerca de la Av. La Roncadora",
+    "lat": -12.0413325,
+    "lon": -76.8764903,
+    "tipo": "quebrada",
+    "exposicion": 3,
+    "detalle_exposicion": "Viviendas precarias en ladera de cerro."
+  },
+  {
+    "id": "las-americas",
+    "nombre": "Residencial Las Américas, Av. La Esperanza",
+    "zona": "Vitarte",
+    "referencia": "Av. La Esperanza, cerca del Parque Las Américas",
+    "lat": -12.0312793,
+    "lon": -76.9049254,
+    "tipo": "colector",
+    "exposicion": 3,
+    "detalle_exposicion": "Zona residencial con comercios."
+  },
+  {
+    "id": "urb-san-francisco",
+    "nombre": "Urbanización San Francisco (canal del río Surco)",
+    "zona": "Salamanca",
+    "referencia": "Pasaje San Francisco, cerca de la Av. Los Castillos y la Vía de Evitamiento",
+    "lat": -12.0616024,
+    "lon": -76.9680546,
+    "tipo": "canal",
+    "exposicion": 4,
+    "detalle_exposicion": "Viviendas junto al canal y cerca de una vía expresa y un centro comercial."
+  },
+  {
+    "id": "asoc-bellavista",
+    "nombre": "Asociación Bellavista, calle Las Praderas",
+    "zona": "Vitarte",
+    "referencia": "Calle Las Praderas, paralela a la Carretera Central",
+    "lat": -12.022228,
+    "lon": -76.9096981,
+    "tipo": "colector",
+    "exposicion": 3,
+    "detalle_exposicion": "Zona residencial con negocios."
+  },
+  {
+    "id": "pedro-ruiz-gallo",
+    "nombre": "Av. Pedro Ruiz Gallo",
+    "zona": "Santa Clara",
+    "referencia": "Cerca del acceso a la Autopista Ramiro Prialé desde la Carretera Central",
+    "lat": -12.0151208,
+    "lon": -76.8879303,
+    "tipo": "colector",
+    "exposicion": 4,
+    "detalle_exposicion": "Avenida con tránsito pesado y acceso a una vía expresa."
+  }
+]
