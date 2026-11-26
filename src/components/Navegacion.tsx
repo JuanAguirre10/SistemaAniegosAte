@@ -3,13 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import Icono from "./Icono";
+import Marca from "./Marca";
 
 const enlaces = [
   { href: "/", texto: "Inicio" },
   { href: "/mapa", texto: "Mapa" },
   { href: "/priorizacion", texto: "Priorización" },
   { href: "/eventos", texto: "Eventos" },
-  { href: "/reportar", texto: "Reportar" },
 ];
 
 export default function Navegacion() {
@@ -17,57 +18,51 @@ export default function Navegacion() {
   const [abierto, setAbierto] = useState(false);
 
   const activo = (href: string) => (href === "/" ? ruta === "/" : ruta.startsWith(href));
+  const clase = (href: string) =>
+    `rounded-lg px-3.5 py-2 text-sm font-medium transition-colors ${
+      activo(href) ? "bg-marca-suave text-marca-oscura" : "text-gris hover:bg-fondo hover:text-texto"
+    }`;
 
   return (
-    <header className="bg-white border-b border-borde sticky top-0 z-[1000]">
-      <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 font-semibold text-texto">
-          <span className="w-8 h-8 rounded-lg bg-marca-suave text-marca grid place-items-center">
-            <svg viewBox="0 0 24 24" className="w-5 h-5" fill="currentColor">
-              <path d="M12 2.5c-.3 0-.6.2-.8.4C9.4 5.3 5.5 10.6 5.5 14a6.5 6.5 0 0 0 13 0c0-3.4-3.9-8.7-5.7-11.1a1 1 0 0 0-.8-.4Z" />
-            </svg>
-          </span>
-          Puntos Críticos Ate
-        </Link>
+    <header className="sticky top-0 z-[1000] border-b border-borde bg-white/90 backdrop-blur">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 h-[72px] flex items-center justify-between gap-4">
+        <Marca />
 
-        <nav className="hidden md:flex gap-1">
-          {enlaces.map((e) => (
-            <Link
-              key={e.href}
-              href={e.href}
-              className={`px-3 py-2 rounded-lg text-sm ${
-                activo(e.href) ? "bg-marca-suave text-marca font-medium" : "text-gris hover:text-texto hover:bg-fondo"
-              }`}
-            >
-              {e.texto}
-            </Link>
-          ))}
-        </nav>
+        <div className="hidden md:flex items-center gap-6">
+          <nav className="flex gap-1">
+            {enlaces.map((e) => (
+              <Link key={e.href} href={e.href} className={clase(e.href)} aria-current={activo(e.href) ? "page" : undefined}>
+                {e.texto}
+              </Link>
+            ))}
+          </nav>
+          <Link href="/reportar" className="boton boton-principal">
+            <Icono nombre="mas" className="w-4 h-4" />
+            Reportar aniego
+          </Link>
+        </div>
 
         <button
           type="button"
           onClick={() => setAbierto(!abierto)}
-          className="md:hidden p-2 rounded-lg text-gris hover:bg-fondo"
-          aria-label="Abrir menú"
+          className="md:hidden p-2 rounded-lg text-gris hover:bg-fondo cursor-pointer"
+          aria-label={abierto ? "Cerrar menú" : "Abrir menú"}
+          aria-expanded={abierto}
         >
-          <svg viewBox="0 0 24 24" className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M4 7h16M4 12h16M4 17h16" />
-          </svg>
+          <Icono nombre={abierto ? "cerrar" : "menu"} className="w-6 h-6" />
         </button>
       </div>
 
       {abierto && (
-        <nav className="md:hidden border-t border-borde px-4 py-2 flex flex-col bg-white">
+        <nav className="md:hidden border-t border-borde bg-white px-4 py-3 flex flex-col gap-1">
           {enlaces.map((e) => (
-            <Link
-              key={e.href}
-              href={e.href}
-              onClick={() => setAbierto(false)}
-              className={`px-3 py-2 rounded-lg text-sm ${activo(e.href) ? "bg-marca-suave text-marca font-medium" : "text-gris"}`}
-            >
+            <Link key={e.href} href={e.href} onClick={() => setAbierto(false)} className={clase(e.href)}>
               {e.texto}
             </Link>
           ))}
+          <Link href="/reportar" onClick={() => setAbierto(false)} className="boton boton-principal mt-2">
+            Reportar aniego
+          </Link>
         </nav>
       )}
     </header>

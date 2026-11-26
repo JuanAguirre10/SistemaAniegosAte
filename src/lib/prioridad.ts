@@ -45,10 +45,12 @@ export function nivelDe(puntaje: number): Nivel {
   return "Baja";
 }
 
+export const niveles: Nivel[] = ["Alta", "Media", "Baja"];
+
 export const colorNivel: Record<Nivel, string> = {
-  Alta: "#e05252",
-  Media: "#e9a23b",
-  Baja: "#4caf7d",
+  Alta: "#c2413b",
+  Media: "#d9860f",
+  Baja: "#1f8a62",
 };
 
 export function evaluar(puntos: Punto[], eventos: Evento[], pesos: Pesos = pesosBase): PuntoEvaluado[] {

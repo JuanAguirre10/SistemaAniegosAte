@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Encabezado from "@/components/Encabezado";
 import ListaEventos from "@/components/ListaEventos";
 import { obtenerEventos, obtenerPuntos } from "@/lib/datos";
 
@@ -8,14 +9,11 @@ export default async function PaginaEventos() {
   const [eventos, puntos] = await Promise.all([obtenerEventos(), obtenerPuntos()]);
 
   return (
-    <div className="space-y-5">
-      <div>
-        <h1 className="text-2xl font-semibold">Eventos registrados</h1>
-        <p className="text-gris mt-1 max-w-3xl">
-          Cada evento sale de una nota de prensa o de un reporte de una entidad pública. Puedes abrir la fuente para
-          revisarla.
-        </p>
-      </div>
+    <div className="space-y-6">
+      <Encabezado
+        titulo="Eventos registrados"
+        descripcion="Cada evento sale de una nota de prensa o de un reporte de una entidad pública. Puedes abrir la fuente para revisarla."
+      />
       <ListaEventos eventos={eventos} puntos={puntos} />
     </div>
   );

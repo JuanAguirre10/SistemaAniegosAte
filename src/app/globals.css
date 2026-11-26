@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-marca: #2b7bb9;
-  --color-marca-suave: #e8f2fa;
-  --color-agua: #3aa7a0;
-  --color-fondo: #f6f9fb;
-  --color-borde: #dde6ee;
-  --color-texto: #1f2d3a;
-  --color-gris: #5d6b78;
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-marca: #1d6fa8;
+  --color-marca-oscura: #165a89;
+  --color-marca-suave: #e8f2f9;
+  --color-fondo: #f5f8fa;
+  --color-borde: #e1e9f0;
+  --color-texto: #12273a;
+  --color-gris: #566879;
+  --font-sans: var(--font-jakarta);
+  --shadow-tarjeta: 0 1px 2px rgb(18 39 58 / 0.04), 0 8px 24px -16px rgb(18 39 58 / 0.18);
 }
 
 body {
@@ -17,16 +17,62 @@ body {
   color: var(--color-texto);
 }
 
-.leaflet-container {
-  font-family: inherit;
+@layer components {
+  .tarjeta {
+    @apply rounded-2xl border border-borde bg-white shadow-tarjeta;
+  }
+
+  .boton {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition-colors cursor-pointer disabled:cursor-default disabled:opacity-60;
+  }
+
+  .boton-principal {
+    @apply bg-marca text-white hover:bg-marca-oscura;
+  }
+
+  .boton-secundario {
+    @apply border border-borde bg-white text-texto hover:border-marca/40 hover:bg-marca-suave/60;
+  }
+
+  .campo {
+    @apply w-full rounded-xl border border-borde bg-white px-3.5 py-2.5 text-sm text-texto transition placeholder:text-gris/60 focus:border-marca focus:ring-3 focus:ring-marca/15 focus:outline-none;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-marca);
+  outline-offset: 2px;
+}
+
+.leaflet-container.leaflet-container {
+  font-family: var(--font-jakarta), sans-serif;
+  background: var(--color-marca-suave);
 }
 
 .capa-clara {
-  filter: saturate(0.55) brightness(1.04);
+  filter: saturate(0.4) brightness(1.05) contrast(0.96);
 }
 
-.leaflet-popup-content {
-  margin: 12px 14px;
+.leaflet-bar,
+.leaflet-touch .leaflet-bar {
+  border: 1px solid var(--color-borde);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px -8px rgb(18 39 58 / 0.35);
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 14px;
+  box-shadow: 0 12px 32px -12px rgb(18 39 58 / 0.35);
+}
+
+.leaflet-container .leaflet-popup-content {
+  margin: 14px 16px;
   font-size: 13px;
-  line-height: 1.45;
+  line-height: 1.5;
+  color: var(--color-texto);
+}
+
+.leaflet-container .leaflet-popup-content p {
+  margin: 0;
 }

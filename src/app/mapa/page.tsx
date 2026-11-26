@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Encabezado from "@/components/Encabezado";
 import VistaMapa from "@/components/VistaMapa";
 import { obtenerEventos, obtenerPuntos, obtenerReportes } from "@/lib/datos";
 
@@ -12,14 +13,11 @@ export default async function PaginaMapa() {
   ]);
 
   return (
-    <div className="space-y-5">
-      <div>
-        <h1 className="text-2xl font-semibold">Mapa de puntos críticos</h1>
-        <p className="text-gris mt-1">
-          Lugares de Ate donde se registraron aniegos, inundaciones por lluvia o huaicos entre 2023 y 2025. Haz clic en un
-          círculo para ver el detalle.
-        </p>
-      </div>
+    <div className="space-y-6">
+      <Encabezado
+        titulo="Mapa de puntos críticos"
+        descripcion="Lugares de Ate con aniegos, inundaciones por lluvia o huaicos entre 2023 y 2025. Elige un punto en la lista o en el mapa para ver el detalle."
+      />
       <VistaMapa puntos={puntos} eventos={eventos} reportes={reportes} />
     </div>
   );

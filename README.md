@@ -4,7 +4,8 @@ Sistema web para identificar y priorizar los puntos críticos de inundación plu
 
 ## Qué hace
 
-- **Mapa**: muestra los puntos críticos de Ate con colores según su prioridad. Se puede filtrar por año, tipo de peligro y nivel.
+- **Inicio**: resume los datos con un mapa, gráficos por año, por tipo de peligro y por prioridad, y los puntos que van primero.
+- **Mapa**: muestra los puntos críticos de Ate con colores según su prioridad. Se puede filtrar por año, tipo de peligro y nivel, y al elegir un punto de la lista el mapa se acerca a él.
 - **Priorización**: ordena los puntos con un puntaje de 0 a 100 que sale de cuatro criterios. Los pesos se pueden mover para ver cómo cambia el orden.
 - **Eventos**: lista los eventos con su fecha, el daño que causaron y el enlace a la fuente.
 - **Reportar**: un vecino puede marcar en el mapa dónde vio un aniego y describir lo que pasó.

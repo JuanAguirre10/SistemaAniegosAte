@@ -1,15 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import Navegacion from "@/components/Navegacion";
+import PieDePagina from "@/components/PieDePagina";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jakarta = Plus_Jakarta_Sans({
+  variable: "--font-jakarta",
   subsets: ["latin"],
 });
 
@@ -20,16 +16,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="es" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
+    <html lang="es" className={`${jakarta.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col font-sans">
         <Navegacion />
-        <main className="flex-1 w-full max-w-6xl mx-auto px-4 py-8">{children}</main>
-        <footer className="border-t border-borde bg-white">
-          <div className="max-w-6xl mx-auto px-4 py-5 text-sm text-gris flex flex-col sm:flex-row gap-2 justify-between">
-            <span>Puntos Críticos Ate · Distrito de Ate, Lima</span>
-            <span>Datos de fuentes públicas, periodo 2023–2025</span>
-          </div>
-        </footer>
+        <main className="flex-1 w-full max-w-6xl mx-auto px-4 sm:px-6 py-8 md:py-10">{children}</main>
+        <PieDePagina />
       </body>
     </html>
   );
